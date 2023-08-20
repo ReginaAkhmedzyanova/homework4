@@ -10,9 +10,8 @@
   shell: "chdir={{ folder }} mvn package"
 
 - name: copy war to localhost
-  ansible.posix.synchronize:
-    mode: pull
-    src: "rsync:/{{ folder }}/target/hello-1.0.war"
+  fetch:
+    src: "{{ folder }}/target/hello-1.0.war"
     dest: "{{ folder }}"
     
          
