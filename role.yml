@@ -1,6 +1,6 @@
 ---
 - name: building war file
-  host: build
+  hosts: build
   become: yes
 
   roles:
@@ -8,7 +8,7 @@
     - build
 
 - name: running app
-  host: prod
+  hosts: prod
   become: yes
 
   roles:
