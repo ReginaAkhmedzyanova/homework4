@@ -3,7 +3,7 @@
 - name: git clone
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
-    dest: {{ folder }}
+    dest: "{{ folder }}"
     clone: yes
 
 - name: create war file
