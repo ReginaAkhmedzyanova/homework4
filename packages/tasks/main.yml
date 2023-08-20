@@ -1,2 +1,11 @@
 ---
 # tasks file for packages
+- name: installing packages
+  apt: name={{item}} state=installed
+  with_items:
+       - git
+       - wget
+       - openjdk-11-jdk
+       - maven
+       - tomcat9
+    
