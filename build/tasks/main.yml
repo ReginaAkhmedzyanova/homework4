@@ -12,6 +12,6 @@
 - name: copy war to localhost
   synchronize:
     src: "{{ folder }}/target/hello-1.0.war"
-    dest: "{{ folder }}"
+    dest: "{{ folder }}/homework4"
     
          

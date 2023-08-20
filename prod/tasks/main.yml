@@ -2,7 +2,7 @@
 # tasks file for prod
 - name: copy war file to remote host
   synchronize:
-    src: "{{ folder }}/hello-1.0.war"
+    src: "{{ folder }}/homework4/hello-1.0.war"
     dest: /var/lib/tomcat9/webapps/
   notify:
     - restart tomcat9
