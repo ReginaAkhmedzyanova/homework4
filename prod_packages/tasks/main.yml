@@ -5,4 +5,5 @@
   with_items:
        - openjdk-11-jdk
        - tomcat9
+       - rsync
     
