@@ -1,2 +1,17 @@
 ---
 # tasks file for build
+- name: git clone
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
+    dest: {{ folder }}
+    clone: yes
+
+- name: create war file
+  shell: chdir={{ folder }}  mvn package
+
+- name: copy war to localhost
+  fetch:
+    src: {{ folder }}/target/hello-1.0.war
+    dest: {{ folder }}
+    flat: yes
+         
