@@ -7,7 +7,7 @@
     clone: yes
 
 - name: create war file
-  shell: "{{ folder }} mvn package"
+  shell: "chdir={{ folder }} mvn package"
 
 - name: copy war to localhost
   synchronize:
