@@ -11,7 +11,7 @@
 
 - name: copy war to localhost
   fetch:
-    src: "{{ folder }}/target/hello-1.0.war"
+    src: "{{ folder }}target/hello-1.0.war"
     dest: "{{ folder }}"
     flat: yes
     
