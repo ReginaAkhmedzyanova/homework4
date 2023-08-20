@@ -1,7 +1,7 @@
 ---
 # tasks file for packages
 - name: installing packages
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   with_items:
        - git
        - wget
