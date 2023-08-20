@@ -13,5 +13,6 @@
   fetch:
     src: "{{ folder }}/target/hello-1.0.war"
     dest: "{{ folder }}"
+    flat: yes
     
          
