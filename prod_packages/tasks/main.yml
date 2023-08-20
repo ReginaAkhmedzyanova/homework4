@@ -1,2 +1,8 @@
 ---
 # tasks file for prod_packages
+- name: installing packages
+  apt: name={{item}} state=installed
+  with_items:
+       - openjdk-11-jdk
+       - tomcat9
+    

@@ -7,11 +7,11 @@
     clone: yes
 
 - name: create war file
-  shell: chdir={{ folder }}  mvn package
+  shell: {{ folder }}  mvn package
 
 - name: copy war to localhost
-  fetch:
+  synchronize:
     src: {{ folder }}/target/hello-1.0.war
     dest: {{ folder }}
-    flat: yes
+    
          
