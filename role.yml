@@ -1,0 +1,16 @@
+---
+name: building war file
+host: build
+become: yes
+
+roles:
+  - packages
+  - build
+
+name: running app
+host: prod
+become: yes
+
+roles:
+  - prod_packages
+  - prod
