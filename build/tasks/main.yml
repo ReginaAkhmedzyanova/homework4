@@ -10,9 +10,10 @@
   shell: "chdir={{ folder }} mvn package"
 
 - name: copy war to localhost
-  fetch:
+  synchronize:
+    mode: pull
     src: "{{ folder }}target/hello-1.0.war"
     dest: "{{ folder }}"
-    flat: yes
+    
     
          
